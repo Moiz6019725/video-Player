@@ -430,10 +430,8 @@ iframe {
     }
 
     .vid-list .thumbnail {
-        width: 100%;
-        height: 260px;
+        height: 280px;
         object-fit: cover;
-        border-radius: 5px;
     }
 
     iframe {
