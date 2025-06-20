@@ -108,3 +108,41 @@ fetch(apiUrl)
     console.error("Error fetching videos:", error);
     sidebar.innerHTML = "<p>Failed to load videos.</p>";
   });
+
+function checkTheme() {
+  if (localStorage.getItem("isThemeToggled") === "true") {
+    document.querySelector("nav").style.backgroundColor = "var(--dark-theme)";
+    document.querySelectorAll("nav .icon").forEach((ele) => {
+      ele.style.cssText = "filter:invert(1)";
+    });
+    document.querySelector(".container").style.backgroundColor =
+      "var(--dark-theme-container)";
+    document.querySelector(".play-video h3").style.color = "var(--light-theme)";
+    document.querySelector(".publisher div").style.color = "var(--light-theme)";
+    document.querySelectorAll(".vid-info a").forEach((ele) => {
+      ele.style.color = "var(--dark-theme-text)";
+    });
+    document.querySelectorAll(".sidebar .icon").forEach((ele) => {
+      ele.style.cssText = "filter:invert(1)";
+    });
+    document.body.style.backgroundColor = "var(--dark-theme-body)";
+  } else {
+    document.querySelector("nav").style.backgroundColor = "var(--light-theme)";
+    document.querySelectorAll("nav .icon").forEach((ele) => {
+      ele.style.cssText = "filter:invert(0)";
+    });
+    document.querySelector(".container").style.backgroundColor =
+      "var(--light-theme-container)";
+    document.querySelector(".sidebar").style.backgroundColor =
+      "var(--light-theme)";
+    document.querySelectorAll(".vid-info a").forEach((ele) => {
+      ele.style.color = "var(--light-theme-text)";
+    });
+    document.querySelectorAll(".sidebar .icon").forEach((ele) => {
+      ele.style.cssText = "filter:invert(0)";
+    });
+    document.body.style.backgroundColor = "var(--light-theme-body)";
+  }
+}
+
+checkTheme();
