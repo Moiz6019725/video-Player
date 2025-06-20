@@ -273,6 +273,7 @@ nav {
     flex-wrap: wrap;
 }
 
+
 .play-video {
     flex-basis: 60%;
 }
@@ -425,6 +426,15 @@ iframe {
         flex-direction: column;
     }
 
+    .row>* {
+        flex-basis: auto;
+        width: 100%;
+    }
+
+    .play-video {
+        flex-basis: 100%;
+    }
+
     .logo {
         width: 90px;
     }
@@ -439,7 +449,8 @@ iframe {
         height: 260px;
         border: none;
     }
-    .list-container{
+
+    .list-container {
         grid-template-columns: 1fr;
     }
 
