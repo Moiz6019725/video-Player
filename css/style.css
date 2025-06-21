@@ -54,6 +54,16 @@ nav {
     top: 0;
     z-index: 10;
 }
+.nav-left{
+    flex-grow: 1;
+}
+.nav-middle{
+    flex-grow: 2;
+}
+.nav-right{
+    place-content: flex-end;
+    flex-grow: .5;
+}
 
 .nav-right .user-icon {
     width: 35px;
@@ -86,9 +96,12 @@ nav {
     width: 20px;
     height: 20px;
 }
+.nav-middle .search-box {
+    width: 100%;
+}
 
 .nav-middle .search-box input {
-    width: 400px;
+    width: 100%;
     border: 0;
     outline: 0;
     background: transparent;
@@ -440,8 +453,23 @@ iframe {
     }
 
     .vid-list .thumbnail {
-        height: 280px;
+        height: 480px;
         object-fit: cover;
+    }
+    .flex-div{
+        padding:0px 10px;
+    }
+    .vid-info a{
+        font-size: 25px;
+    }
+    .vid-info p{
+        font-size: 19px;
+    }
+    .nav-middle .search-box input {
+    flex-grow:1;
+    }
+    .banner img {
+        height: 200px;
     }
 
     iframe {
